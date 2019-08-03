@@ -80,10 +80,8 @@ TW_USE_TOOLBOX := true
 TW_THEME := portrait_hdpi
 
 # Selinux
-HAVE_SELINUX := true
 SELINUX_IGNORE_NEVERALLOWS := true 
 
 # USB
 TW_EXCLUDE_DEFAULT_USB_INIT := true
 TW_MTP_DEVICE := /dev/mtp_usb
-

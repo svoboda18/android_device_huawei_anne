@@ -9,20 +9,20 @@
 /erecovery_ramdisk       emmc            /dev/block/bootdevice/by-name/erecovery_ramdisk		flags=display="eRecovery Ramdisk";backup=0;flashimg
 /misc		emmc		/dev/block/bootdevice/by-name/misc
 /oeminfo        emmc		/dev/block/bootdevice/by-name/oeminfo	flags=display="OEM Info";backup=1;flashimg
-/system_image		emmc		/dev/block/bootdevice/by-name/system	flags=display="System Image";backup=1;flashimg
-/vendor_image		emmc		/dev/block/bootdevice/by-name/vendor    flags=display="Vendor Image";backup=1;flashimg
+/system_image	emmc		/dev/block/bootdevice/by-name/system	flags=display="System Image";backup=1;flashimg
+/vendor_image	emmc		/dev/block/bootdevice/by-name/vendor    flags=display="Vendor Image";backup=1;flashimg
 
 # Partitions
-/cache		ext4		/dev/block/bootdevice/by-name/cache		flags=display="Cache";backup=0
-/cust		ext4		/dev/block/bootdevice/by-name/cust		flags=display="Cust";backup=1;flashimg
+/cache		ext4		/dev/block/bootdevice/by-name/cache	flags=display="Cache";backup=0
+/cust		ext4		/dev/block/bootdevice/by-name/cust	flags=display="Cust";backup=1;flashimg
 /data		f2fs		/dev/block/bootdevice/by-name/userdata	flags=display="Data";backup=1;flashimg;settingsstorage
-/external_sd	vfat		/dev/block/mmcblk1p1	/dev/block/mmcblk1		flags=display="SD Card";storage;wipeingui;removable
 /preload	ext4		/dev/block/bootdevice/by-name/preload	flags=display="Preload";backup=1;flashimg
 /product	ext4		/dev/block/bootdevice/by-name/product	flags=display="Product";backup=1;flashimg
 /splash2	ext4		/dev/block/bootdevice/by-name/splash2	flags=display="Splash";backup=0
 /system		ext4		/dev/block/bootdevice/by-name/system	flags=backup=1;flashimg
-/system_root		ext4		/dev/block/bootdevice/by-name/system	flags=display="System Root (when modifying, use system_root)";wipeingui;backup=0
+/system_root	ext4		/dev/block/bootdevice/by-name/system	flags=display="System Root (when modifying, use system_root)";wipeingui;backup=0
 /vendor		ext4		/dev/block/bootdevice/by-name/vendor	flags=display="Vendor";backup=1;flashimg
 /version 	ext4 		/dev/block/bootdevice/by-name/version 	flags=display="Version";backup=1;flashimg
 /odm     	ext4 		/dev/block/bootdevice/by-name/odm	flags=display="ODM";backup=1;flashimg
-/usbotg		   auto		/dev/block/sda1         /dev/block/sda          flags=display="USB OTG";storage;removable;backup=0
+/external_sd	vfat		/dev/block/mmcblk1p1 /dev/block/mmcblk1	flags=display="SD Card";storage;wipeingui;removable
+/usbotg		auto		/dev/block/sda1    /dev/block/sda       flags=display="USB OTG";storage;removable;backup=0
